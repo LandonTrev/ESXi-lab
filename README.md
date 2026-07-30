@@ -12,10 +12,6 @@ The goal is to simulate a small enterprise environment end to end - virtualizati
 
 It is the practical complement to a certification track (Security+ now, a cloud fundamentals cert next), and it is aimed squarely at the patterns that show up in real infrastructure and government / defense environments: least privilege, network segmentation, default-deny firewalling, and separation of the management plane from production traffic.
 
-## Architecture
-
-![Lab architecture overview|697](Images/Lab-Architecture.svg)
-
 ### Physical topology
 The environment runs on a Minisforum MS-01 mini workstation acting as a single ESXi host, cabled through a MikroTik CRS310 switch. The layout is router, then switch, then server - the enterprise-realistic pattern where the switch is the core of the network rather than a passthrough. The host connects to the switch over a 10GbE SFP+ DAC carrying tagged VLAN traffic, with a separate 2.5GbE copper link reserved for management.
 
