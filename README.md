@@ -25,7 +25,8 @@ A Windows Server 2025 domain controller (DC01) hosts a new AD DS forest (landon.
 Traffic is separated into VLANs using 802.1Q tagging, enforced by bridge VLAN filtering on the MikroTik. Servers and clients live on different VLANs and cannot reach each other freely - inter-VLAN traffic is routed and then filtered by a stateful, default-deny firewall that permits only the specific Active Directory services clients require. A DHCP relay carries client DHCP requests across the VLAN boundary to the domain controller.
 
 ### Storage
-A UGREEN DXP2800 NAS with mirrored drives is planned to run TrueNAS, providing ZFS-backed NFS / iSCSI datastores to ESXi over the 10GbE backbone and AD-integrated SMB shares. This layer is on the roadmap and not yet built (Waiting on 2x 4TB NAS Drives; WD Red Plus 5400 rpm)
+A UGREEN DXP2800 NAS with mirrored drives is planned to run TrueNAS, providing ZFS-backed NFS / iSCSI datastores to ESXi over the 10GbE DAC cable and AD-integrated SMB shares. This layer is on the roadmap and not yet built. I will need an additional NVME to install TrueNAS instead of the standard OS installed. I have other parts of the lab I need to explore first so this is on the waiting list.
+
 ## Component breakdown
 
 | Layer      | Component                               | Role in the lab                                              |
