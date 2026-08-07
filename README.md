@@ -42,18 +42,18 @@ DHCP was the interesting part. Client requests are broadcasts, so they die at th
 
 Not built yet. The plan is TrueNAS on the DXP2800 serving NFS and iSCSI datastores to ESXi off the ZFS mirror, plus SMB shares joined to the domain.
 
-It's blocked on hardware. The NAS ships with UGREEN's own OS on the internal storage, so I need another NVMe before I can install TrueNAS. Other things come first.
+It's blocked on hardware. The NAS ships with UGREEN's own OS on the internal storage. Determining whether it is worth it to get hands on with TrueNAS. Other things come first.
 
 ## What works
 
-- ESXi installed and tuned for this hardware, datastore on its own NVMe
-- vSwitch set up with a tagged port group per VLAN, management traffic on a separate NIC
+- ESXi installed and configured for the CPU, datastore on its own NVMe
+- vSwitch-Lab set up with a tagged port group per VLAN, management traffic on a separate NIC
 - landon.lab forest with DNS and DHCP
 - VLAN 10 for servers and VLAN 20 for clients, segmented and tested end to end
 - DHCP relay working across the VLAN boundary
-- Windows 11 client joined to the domain, renamed, and registered in DNS
+- Windows 11 client joined to the domain, renamed, and registered in DNS (so other machines and the domain can find it by name) 
 - Separate standard and admin accounts
-- Firewall between the VLANs dropping everything but the AD services clients need
+- Firewall between the VLANs dropping everything but the AD services clients need 
 
 ## Roadmap
 
@@ -76,4 +76,4 @@ It's blocked on hardware. The NAS ships with UGREEN's own OS on the internal sto
 | [Topics/](Topics/) | Distilled reference notes per concept |
 | [Images/](Images/) | Architecture and concept diagrams |
 
-This is an [Obsidian](https://obsidian.md) vault. Clone it and open the folder as a vault for full wiki-link navigation, or just browse the Markdown here on GitHub.
+This is an [Obsidian](https://obsidian.md) vault. Clone it and open the folder as a vault for full wiki-link navigation or just browse the Markdown here on GitHub.
