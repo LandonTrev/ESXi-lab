@@ -1,17 +1,20 @@
 # ESXi Lab
 
-A Windows domain split across VLANs, running on ESXi installed straight onto the hardware. I write up each session as I go.
+This lab is built around a mini pc running ESXi as a type 1 bare metal hypervisor. The host connects to a MicroTik CRS Switch over a trunk (plus and access port for management). The switch handles VLAN filtering and L3 routing between the lab segments.
 
-Hardware first, since "homelab" usually means nested VMs on a spare laptop:
+The list of hardware is as follows:
 
 - Minisforum MS-01 (i9-13900H, 64GB DDR5), the only ESXi host
-- MikroTik CRS310-8G+2S+IN, doing VLAN filtering, routing between VLANs, and DHCP relay
+- MikroTik CRS310-8G+2S+IN, doing VLAN filtering, routing between VLANs, and DHCP relay. CRS models having routing capabilities.
 - A 10GbE SFP+ DAC from the switch to the host, carrying tagged traffic
-- UGREEN DXP2800 with 2x 4TB in a ZFS mirror. Not set up yet, see roadmap.
+- A 2.5 GBE cable for host management traffic. Not tagged, this is the access port.
+- UGREEN DXP2800 with 2x 4TB in a ZFS mirror. Not set up yet see roadmap.
+
+**Note:** After experimenting with a fully virtualized VirtualBox lab I decided to build this lab to understand how VLANs, trunk ports, access ports, and switches actually work as it's much more intuitive to understand when it is fully laid out in front of you. Also, the speed of my VM's were extremely slow when sharing resources from my laptop.
 
 **Status:** active build, updated each session.
 
-I'm building a small enterprise environment end to end and writing down why I made each choice, not just what I clicked. The things I'm deliberately practicing are the ones that keep coming up in real infrastructure and in defense job postings: least privilege, segmenting the network, denying traffic by default and opening only what's needed, and keeping management traffic off the production path.
+I'm building a small environment end to end and writing down why I made each choice, not just what I clicked. The things I'm deliberately practicing are the ones that keep coming up in real infrastructure and in defense job postings: least privilege, segmenting the network, denying traffic by default and opening only what's needed, and keeping management traffic off the production path.
 
 ## Architecture
 
