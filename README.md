@@ -36,7 +36,7 @@ DC01 runs Windows Server 2025 and holds the landon.lab forest, plus DNS and DHCP
 
 VLANs are tagged with 802.1Q and enforced by bridge VLAN filtering on the MikroTik. Servers sit on VLAN 10, clients on VLAN 20, and they can't reach each other freely. Traffic between them gets routed and then filtered, with the firewall dropping everything except the AD services clients actually need.
 
-DHCP was the interesting part. Client requests are broadcasts, so they die at the VLAN boundary. A relay picks them up and forwards them as unicast to DC01.
+DHCP was the interesting part. Client requests are broadcasts, so they die at the VLAN boundary. A relay picks them up and forwards them as unicast to DC01. Reads the scope table and selects an available address within the range.
 
 ### Storage
 
