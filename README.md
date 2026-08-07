@@ -30,7 +30,7 @@ The MS-01 has a mix of performance and efficiency cores, which ESXi does not lov
 
 ### Identity
 
-DC01 runs Windows Server 2025 and holds the landon.lab forest, plus DNS and DHCP for everything. CLIENT01 is Windows 11 Enterprise, joined to the domain and managed from the DC. Users follow a naming standard, and my admin account is separate from my normal one.
+On VLAN10 DC01 runs Windows Server 2025 and holds the landon.lab forest, plus DNS and DHCP for everything. VLAN 20 holds clients, CLIENT01 is Windows 11 Enterprise, joined to the domain and managed from the DC. Users follow a naming standard, and my admin account is separate from my normal one.
 
 ### Network segmentation
 
