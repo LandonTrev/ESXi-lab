@@ -62,7 +62,7 @@ It's blocked on hardware. The NAS ships with UGREEN's own OS on the internal sto
 - AD Certificate Services on its own member server
 - Tailscale for remote access, running on the NAS rather than the host. If I fat finger a firewall rule I don't want to lose the hypervisor along with it
 - Server Core and Azure Arc
-- SIEM and IDS work in here eventually. TryHackMe is covering the basics for now
+- SIEM and NIDS work in here eventually. TryHackMe is covering the basics for now
 
 ## Repository layout
 
