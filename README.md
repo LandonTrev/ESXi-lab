@@ -19,7 +19,7 @@ I'm building a small enterprise environment end to end and writing down why I ma
 
 Router, then switch, then server. The switch is the core of the network instead of something traffic just passes through, which is how most real networks are laid out.
 
-The host talks to the switch over a 10GbE DAC carrying tagged VLAN traffic. ESXi management gets its own 2.5GbE copper run, though it negotiates down to 1GbE because the switch's copper ports top out there.
+The host talks to the switch over a 10GbE DAC carrying tagged VLAN traffic. ESXi management gets its own 2.5GbE cord, though it negotiates down to 1GbE because the switch's ports top out there.
 
 ### Virtualization
 
