@@ -1,4 +1,4 @@
-# Enterprise Active Directory Lab
+# ESXi Lab
 
 A Windows domain split across VLANs, running on ESXi installed straight onto the hardware. I write up each session as I go.
 
