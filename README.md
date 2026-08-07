@@ -10,11 +10,9 @@ The list of hardware is as follows:
 - A 2.5 GBE cable for host management traffic. Not tagged, this is the access port.
 - UGREEN DXP2800 with 2x 4TB in a ZFS mirror. Not set up yet see roadmap.
 
-**Note:** After experimenting with a fully virtualized VirtualBox lab I decided to build this lab to understand how VLANs, trunk ports, access ports, and switches actually work as it's much more intuitive to understand when it is fully laid out in front of you. Also, the speed of my VM's were extremely slow when sharing resources from my laptop.
+**Why I'm Building this:** Originally, I started out with a fully Virtualized VirtualBox lab. The networking was hard to get a grasp on as it gets abstracted behind Virtual Adapters and NIC's mapped to interfaces on a virtualized router/firewall. I built this to actually see how VLAN's, trunk ports, access ports, and switching works with gear I have right in front of me. Also to work with a hypervisor and Switch OS which are used in actual enterprise environments. Running VirtualBox VMs on my primary laptop was also painfully slow and tough to navigate with the 4-5 VM's I'd have open at any given time.
 
 **Status:** active build, updated each session.
-
-I'm building a small environment end to end and writing down why I made each choice, not just what I clicked. The things I'm deliberately practicing are the ones that keep coming up in real infrastructure and in defense job postings: least privilege, segmenting the network, denying traffic by default and opening only what's needed, and keeping management traffic off the production path.
 
 ## Architecture
 
