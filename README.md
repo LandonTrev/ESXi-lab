@@ -1,10 +1,10 @@
 # ESXi Lab
 
-This lab is built around a mini pc running ESXi as a type 1 bare metal hypervisor. The host connects to a MicroTik CRS Switch over a trunk (plus and access port for management). The switch handles VLAN filtering and L3 routing between the lab segments.
+This lab is built around a mini pc running ESXi as a type 1 bare metal hypervisor. The host connects to a MicroTik CRS Switch over a trunk (plus and access port for management). The switch handles VLAN filtering and L3 routing between the lab segments (VLAN10,VLAN20,VLAN30,etc.)
 
 The list of hardware is as follows:
 
-- Minisforum MS-01 (i9-13900H, 64GB DDR5), the only ESXi host
+- Minisforum MS-01 (i9-13900H, 64GB DDR5), the only ESXi host.
 - MikroTik CRS310-8G+2S+IN, doing VLAN filtering, routing between VLANs, and DHCP relay. CRS models having routing capabilities.
 - A 10GbE SFP+ DAC from the switch to the host, carrying tagged traffic
 - A 2.5 GBE cable for host management traffic. Not tagged, this is the access port.
@@ -18,9 +18,9 @@ The list of hardware is as follows:
 
 ### Physical topology
 
-Router, then switch, then server. The switch is the core of the network instead of something traffic just passes through, which is how most real networks are laid out.
+Router, then switch (w/ L3 capability), then server. The switch is the core of the network instead of something traffic just passes through, which is how most real networks are laid out.
 
-The host talks to the switch over a 10GbE DAC carrying tagged VLAN traffic. ESXi management gets its own 2.5GbE cord, though it negotiates down to 1GbE because the switch's ports top out there.
+The host talks to the switch over a 10GbE DAC carrying tagged VLAN traffic. ESXi management gets its own 2.5GbE cord, though its down to 1GbE because the switch's ports top out there.
 
 ### Virtualization
 
