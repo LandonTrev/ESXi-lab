@@ -1,4 +1,4 @@
-# ESXi Lab
+# ESXi VSphere 8 Lab
 
 This lab is built around a mini pc running ESXi as a type 1 bare metal hypervisor. The host connects to a MicroTik CRS Switch over a trunk (plus and access port for management). The switch handles VLAN filtering and L3 routing between the lab segments (VLAN10,VLAN20,VLAN30,etc.)
 
