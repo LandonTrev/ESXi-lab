@@ -44,7 +44,7 @@ Dst. Port: change ...49152,65535 to ...49152-65535. Protocol tcp. Apply.
 gpupdate /force on CLIENT01 then completed successfully.
 
 ### Lesson
-Same class of bug as the earlier TCP 389 gap: symptom pointed at DNS,
+Same class of bug as an earlier TCP 389 gap: symptom pointed at DNS,
 cause was a missing firewall port. RPC needs 135 AND the full dynamic
 range 49152-65535 as an actual range. When a GP error says "could not
 resolve," pull the numeric code from the event Properties before trusting
